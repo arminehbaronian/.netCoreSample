@@ -1,0 +1,31 @@
+﻿@page
+@model IndexModel
+@using netCore.WebSite.Components
+
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome Armineh</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+@(await Html.RenderComponentAsync<ProductComponent>(RenderMode.ServerPrerendered))
+<script src="_framework/blazor.server.js"></script>
+@*@if (Model.Products.Count() > 0)
+{
+    <div class="card-columns">
+        @foreach (var product in Model.Products)
+        {
+            <div class="card">
+                <div class="card-img" style="background-image:url('@product.image');"> </div>
+                <div class="card-body">
+                    <h5 class="card-title">
+                        @product.Title
+                    </h5>
+                </div>
+            </div>
+        }
+    </div>
+}*@
+<div></div>
